@@ -1,4 +1,5 @@
 import Menu from "@/components/Menu";
+import Navbar from "@/components/Navbar";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,8 +34,9 @@ export default function RootLayout({
         </Link>
         <Menu />
       </div>
-      <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-blue-200">
-        right
+      <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-y-scroll p-2">
+        <Navbar />
+        {children}
       </div>
     </div>
   );

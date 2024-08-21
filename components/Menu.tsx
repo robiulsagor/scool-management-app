@@ -46,12 +46,12 @@ const menuItems = [
         href: "/assignments",
       },
       {
-        icon: "/attendence.png",
-        label: "Attendence",
-        href: "/attendence",
+        icon: "/attendance.png",
+        label: "Attendance",
+        href: "/attendance",
       },
       {
-        icon: "/event.png",
+        icon: "/calendar.png",
         label: "events",
         href: "/events",
       },
@@ -108,7 +108,7 @@ const Menu = () => {
                 width={20}
                 height={20}
                 alt={j.label}
-                // className="w-5 h-5"
+                className="w-4 h-4 object-cover"
               />
               <span className="hidden lg:block text-sm capitalize">
                 {" "}
