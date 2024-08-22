@@ -15,26 +15,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex h-screen">
-      <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-2 md:p-4">
+    <div className="h-screen flex ">
+      {/* LEFT */}
+      <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4">
         <Link
           href="/"
-          className="flex items-center gap-2 justify-center lg:justify-start"
+          className="flex items-center justify-center lg:justify-start gap-2"
         >
-          <Image
-            src="/logo.png"
-            width={30}
-            height={30}
-            alt=""
-            className="w-5 h-5 object-cover"
-          />
-          <span className="hidden lg:block text-gray-600 font-medium">
-            ManageSchool
-          </span>
+          <Image src="/logo.png" alt="logo" width={32} height={32} />
+          <span className="hidden lg:block font-bold">SchooLama</span>
         </Link>
         <Menu />
       </div>
-      <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-y-scroll p-2">
+      {/* RIGHT */}
+      <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-auto flex flex-col p-2">
         <Navbar />
         {children}
       </div>
