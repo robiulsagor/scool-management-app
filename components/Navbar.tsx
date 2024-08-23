@@ -10,13 +10,13 @@ const Navbar = () => {
           width={10}
           height={10}
           alt="search"
-          className="w-4 h-4 opacity-50"
+          className="w-3 h-3 opacity-50"
         />
         <input
           type="text"
           name=""
           id=""
-          className="w-[280px] outline-none bg-transparent text-sm text-gray-700 p-2"
+          className="w-[200px] outline-none bg-transparent text-xs text-gray-700 p-1"
           placeholder="Search..."
         />
       </div>

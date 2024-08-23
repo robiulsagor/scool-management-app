@@ -45,12 +45,10 @@ function EventCalendar() {
       {events.map((event) => (
         <div
           key={event.id}
-          className=" my-4 border-2 border-t-4 p-5 rounded-lg even:border-t-sagorPurple odd:border-t-sky"
+          className=" my-4 border-2 border-t-4 p-3 rounded-lg even:border-t-sagorPurple odd:border-t-sky"
         >
-          <div className="flex justify-between">
-            <h1 className="text-base text-gray-700 font-semibold">
-              {event.title}
-            </h1>
+          <div className="flex justify-between items-center">
+            <h1 className="text-sm text-gray-700 font-bold">{event.title}</h1>
             <p className="text-xs text-gray-300">{event.time}</p>
           </div>
           <p className="text-sm text-gray-400 block mt-3">
