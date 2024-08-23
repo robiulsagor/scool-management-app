@@ -108,15 +108,17 @@ const TeacherListPage = () => {
           <TableSearch />
 
           <div className="flex  items-center gap-4  md:justify-end">
-            <div className="w-7 h-7 bg-yellow-200 rounded-full flex items-center justify-center cursor-pointer">
+            <button className="w-7 h-7 bg-yellow-200 rounded-full flex items-center justify-center cursor-pointer">
               <Image src="/filter.png" width={15} height={15} alt="filter" />
-            </div>
-            <div className="w-7 h-7 bg-yellow-200 rounded-full flex items-center justify-center cursor-pointer">
+            </button>
+            <button className="w-7 h-7 bg-yellow-200 rounded-full flex items-center justify-center cursor-pointer">
               <Image src="/sort.png" width={15} height={15} alt="sort" />
-            </div>
-            <div className="w-7 h-7 bg-yellow-200 rounded-full flex items-center justify-center cursor-pointer">
-              <Image src="/plus.png" width={15} height={15} alt="plus" />
-            </div>
+            </button>
+            {role === "admin" && (
+              <button className="w-7 h-7 bg-yellow-200 rounded-full flex items-center justify-center cursor-pointer">
+                <Image src="/plus.png" width={15} height={15} alt="plus" />
+              </button>
+            )}
           </div>
         </div>
       </div>
