@@ -30,7 +30,9 @@ const Announcement = () => {
     <div className="bg-white p-3 rounded-lg">
       <div className="flex items-center justify-between text-gray-700 mb-4">
         <h1 className="text-lg font-semibold">Announcements</h1>
-        <p className="text-xs text-gray-300">View All</p>
+        <p className="text-xs text-gray-400 font-medium cursor-pointer hover:underline">
+          View All
+        </p>
       </div>
 
       <div className="flex flex-col gap-4">
