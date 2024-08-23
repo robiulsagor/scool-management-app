@@ -53,7 +53,7 @@ const cols = [
   },
 ];
 
-const TeacherListPage = () => {
+const TeachersListPage = () => {
   const renderRow = (item: Teacher) => (
     <tr
       key={item.id}
@@ -132,4 +132,4 @@ const TeacherListPage = () => {
   );
 };
 
-export default TeacherListPage;
+export default TeachersListPage;
