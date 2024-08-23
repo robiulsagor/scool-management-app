@@ -1,3 +1,4 @@
+import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -60,9 +61,10 @@ const AnnouncementsListPage = () => {
           </Link>
 
           {role === "admin" && (
-            <button className="w-7 h-7  rounded-full flex items-center justify-center bg-sagorPurple">
-              <Image src="/delete.png" width={20} height={20} alt="view" />
-            </button>
+            <>
+              <FormModal table="announcement" type="update" data={item} />
+              <FormModal table="announcement" type="delete" id={item.id} />
+            </>
           )}
         </div>
       </td>
@@ -88,9 +90,7 @@ const AnnouncementsListPage = () => {
               <Image src="/sort.png" width={15} height={15} alt="sort" />
             </button>
             {role === "admin" && (
-              <button className="w-7 h-7 bg-yellow-200 rounded-full flex items-center justify-center cursor-pointer">
-                <Image src="/plus.png" width={15} height={15} alt="plus" />
-              </button>
+              <FormModal table="announcement" type="create" />
             )}
           </div>
         </div>

@@ -1,6 +1,8 @@
 import Announcement from "@/components/Announcement";
 import BigCalendar from "@/components/BigCalendar";
+import FormModal from "@/components/FormModal";
 import Performance from "@/components/Performance";
+import { role } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,6 +27,28 @@ const SingleTeacherPage = () => {
 
             <div className="w-2/3 flex flex-col gap-4 justify-between">
               <h2 className="text-xl font-semibold">Sagor Islam</h2>
+
+              {role === "admin" && (
+                <FormModal
+                  table="teacher"
+                  type="update"
+                  data={{
+                    id: 1,
+                    username: "deanguerrero",
+                    email: "deanguerrero@gmail.com",
+                    password: "password",
+                    firstName: "Dean",
+                    lastName: "Guerrero",
+                    phone: "+1 234 567 89",
+                    address: "1234 Main St, Anytown, USA",
+                    bloodType: "A+",
+                    dateOfBirth: "2000-01-01",
+                    sex: "male",
+                    img: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                  }}
+                />
+              )}
+
               <p className="text-gray-600 text-sm">
                 Lorem ipsum dolor, sit amet consectetur adipisicing.
               </p>
